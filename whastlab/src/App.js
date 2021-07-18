@@ -22,11 +22,11 @@ class App extends React.Component {
     return (
       <Centralizar>
       <AppContainer>
-        <MessagesContainer>
+        <MensagensContainer>
           {
             this.state.mensagem.map((message, index) => <p key={index}><BoldText>{message.user}</BoldText>{': ' + message.text}</p>)
           }
-        </MessagesContainer>
+        </MensagensContainer>
         <MessageForm adicionarMensagem={this.adicionarMensagem} />
       </AppContainer>
       </Centralizar>
@@ -57,7 +57,7 @@ const AppContainer = styled.div`
   border-radius: 50px
 `
 
-const MessagesContainer = styled.div`
+const MensagensContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
